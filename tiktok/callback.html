@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Read &amp; Rip Publisher | Sign-in</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="referrer" content="no-referrer">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="stylesheet" href="../styles.css">
+<style>
+  .cb{max-width:640px;margin:0 auto;padding:64px 20px}
+  .code{font-family:'IBM Plex Mono',monospace;font-size:15px;word-break:break-all;background:rgba(46,230,160,.08);border:1px solid var(--line);border-radius:8px;padding:14px;margin:16px 0}
+</style>
+</head>
+<body>
+<main class="cb stack">
+  <span class="mono">Read &amp; Rip Publisher</span>
+  <h1 id="h">Sign-in</h1>
+  <p id="msg" class="muted">This page finishes connecting Read &amp; Rip's own TikTok account to our internal publishing tool.</p>
+  <div id="box" style="display:none">
+    <p class="muted">Copy this code and paste it into the setup window on your computer. It expires in a few minutes.</p>
+    <div class="code" id="code"></div>
+    <button class="btn" id="copy" type="button">Copy code</button>
+  </div>
+  <p class="muted" style="font-size:14px"><a href="../privacy.html">Privacy Policy</a> &middot; <a href="../terms.html">Terms</a></p>
+</main>
+<script>
+(function () {
+  var p = new URLSearchParams(location.search);
+  var code = p.get('code'), err = p.get('error');
+  if (code) {
+    document.getElementById('h').textContent = 'Almost done';
+    document.getElementById('code').textContent = code;
+    document.getElementById('box').style.display = 'block';
+    document.getElementById('copy').onclick = function () {
+      navigator.clipboard.writeText(code).then(function () {
+        document.getElementById('copy').textContent = 'Copied';
+      });
+    };
+  } else if (err) {
+    document.getElementById('h').textContent = 'Sign-in was not completed';
+    document.getElementById('msg').textContent = 'TikTok returned: ' + err + '. Close this tab and try again from the setup window.';
+  }
+  history.replaceState(null, '', location.pathname);
+})();
+</script>
+</body>
+</html>
