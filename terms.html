@@ -1,7 +1,8 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.remove("no-js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Terms of Service | Read &amp; Rip</title>
 <meta name="description" content="Terms for using readandrip.com and the Read &amp; Rip Publisher, the tool Read &amp; Rip uses to post its own videos.">
@@ -14,6 +15,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <link rel="stylesheet" href="styles.css">
+<script src="site.js" defer></script>
 <style>
   .legaldoc{max-width:76ch}
   .legaldoc h2{font-size:clamp(26px,3.2vw,34px);margin-top:28px}
@@ -23,29 +25,51 @@
 </style>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="site">
   <div class="wrap navbar">
     <a class="brand" href="index.html">
-      <img src="assets/logo.png" alt="Read &amp; Rip QB logo" width="224" height="224">
+      <img src="assets/logo.png" alt="" width="224" height="224">
       <span>
-        <span class="name">Read &amp; Rip QB</span><br>
-        <span class="where">Brighton, Michigan</span>
+        <span class="name">Read &amp; Rip</span>
+        <span class="where">Football IQ &middot; QB Training</span>
       </span>
     </a>
     <nav class="main" aria-label="Main">
-      <a href="index.html">Home</a>
+      <a href="app.html">For Players</a>
+      <a href="coaches.html">For Coaches</a>
       <a href="training.html">QB Training</a>
-      <a href="film-report.html">Film Reports</a>
-      <a href="flag-football-qb-training.html">Flag QB</a>
-      <a href="app.html">The App</a>
-      <a href="https://learn.readandrip.com">Articles</a>
-      <a href="about.html">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="https://learn.readandrip.com">Learn Free</a>
     </nav>
-    <a class="btn sm" href="https://calendly.com/zachtrainor-readripqb/individual-qb-training-75">Book a session &mdash; $75</a>
+    <div class="nav-actions">
+      <a class="login" href="https://readripqb.com/login">Log in</a>
+      <a class="btn sm" href="https://readripqb.com">Start free</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-open><span class="bars" aria-hidden="true"><i></i></span>Menu</button>
+    </div>
+  </div>
+  <div class="menu-panel" id="site-menu" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
+    <div class="menu-top">
+      <a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="224" height="224"><span class="name">Read &amp; Rip</span><span class="sr-only">home</span></a>
+      <button class="menu-btn" type="button" data-menu-close style="display:inline-flex">Close</button>
+    </div>
+    <nav aria-label="Mobile">
+      <a href="index.html">Home</a>
+      <a href="app.html">For Players</a>
+      <a href="coaches.html">For Coaches</a>
+      <a href="training.html">QB Training</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="https://learn.readandrip.com">Learn Free</a>
+    </nav>
+    <div class="menu-cta">
+      <a class="btn" href="https://readripqb.com">Start free</a>
+      <a class="btn ghost" href="https://readripqb.com/login">Log in</a>
+    </div>
+    <p class="menu-note">Booking a QB training session with Zach? That's under <a href="training.html">QB Training</a>, separate from the app.</p>
   </div>
 </header>
 
-<main>
+<main id="main">
   <section>
     <div class="wrap stack legaldoc">
       <span class="mono">Last updated October 21, 2026</span>
@@ -76,26 +100,53 @@
 </main>
 
 <footer class="site">
-  <div class="wrap inner">
-    <div class="id">
-      <img src="assets/logo.png" alt="" width="224" height="224">
-      <span>Read &amp; Rip QB Training &middot; Coach Zach Trainor &middot; Brighton, MI</span>
+  <div class="wrap cols">
+    <div class="about-col">
+      <div class="id"><img src="assets/logo.png" alt="" width="224" height="224"><span>Read &amp; Rip</span></div>
+      <p>Football IQ for players, coaches and fans, plus in-person QB training with Coach Zach Trainor.</p>
     </div>
-    <nav>
-      <a href="training.html">QB Training</a>
-      <a href="one-on-one-qb-training.html">1-on-1</a>
-      <a href="small-group-qb-training.html">Small Group</a>
-      <a href="film-report.html">Film Reports</a>
-      <a href="flag-football-qb-training.html">Flag QB</a>
-      <a href="app.html">The App</a>
-      <a href="https://learn.readandrip.com">Articles</a>
-      <a href="about.html">About</a>
-      <a href="press.html">Press</a>
+    <nav aria-label="The app">
+      <h2>The app</h2>
+      <ul>
+        <li><a href="app.html">For players</a></li>
+        <li><a href="coaches.html">For coaches</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="https://readripqb.com/login">Log in</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.readripqb.app">Google Play</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="QB training">
+      <h2>QB training</h2>
+      <ul>
+        <li><a href="training.html">QB Training</a></li>
+        <li><a href="one-on-one-qb-training.html">1-on-1</a></li>
+        <li><a href="small-group-qb-training.html">Small Group</a></li>
+        <li><a href="flag-football-qb-training.html">Flag QB</a></li>
+        <li><a href="film-report.html">Film Reports</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Learn">
+      <h2>Learn free</h2>
+      <ul>
+        <li><a href="https://learn.readandrip.com">All articles</a></li>
+        <li><a href="https://learn.readandrip.com/coverage-quiz/">Coverage quiz</a></li>
+        <li><a href="https://learn.readandrip.com/football-coverages-explained/">Coverages explained</a></li>
+        <li><a href="https://learn.readandrip.com/what-is-a-gap-in-football/">Gaps explained</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Company">
+      <h2>Read &amp; Rip</h2>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
     </nav>
   </div>
   <div class="wrap legal">
-    <span>&copy; 2026 Read &amp; Rip QB Training &middot; <a href="mailto:zachtrainor@readripqb.com">zachtrainor@readripqb.com</a> &middot; <a href="tel:+12488046196">(248) 804-6196</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a></span>
-    <span>Mon&ndash;Fri 10&ndash;6 &middot; Sun 12:30&ndash;3:30 &middot; Also: <a href="https://readripqb.com">the Read &amp; Rip app</a></span>
+    <span>&copy; 2026 Read &amp; Rip QB Training &middot; <a href="mailto:zachtrainor@readripqb.com">zachtrainor@readripqb.com</a> &middot; <a href="tel:+12488046196">(248) 804-6196</a></span>
+    <span>QB training: <a href="https://calendly.com/zachtrainor-readripqb/individual-qb-training-75">current availability on Calendly</a> &middot; Also: <a href="https://readripqb.com">the Read &amp; Rip app</a></span>
   </div>
 </footer>
 </body>

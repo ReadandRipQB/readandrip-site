@@ -1,23 +1,24 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
+<script>document.documentElement.classList.remove("no-js")</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Read &amp; Rip | QB Training, the App and Football IQ</title>
-<meta name="description" content="Read &amp; Rip: quarterback training in Brighton, Michigan, the Read &amp; Rip app for coverage and pre-snap reads, and plain-words football IQ articles.">
+<title>Read &amp; Rip | Football IQ App and QB Training</title>
+<meta name="description" content="Read &amp; Rip is a football IQ app: learn coverages, fronts and pre-snap reads, then rep them in the Vision Trainer. Free in any browser or on Google Play. Plus QB training with Zach Trainor.">
 <link rel="canonical" href="https://readandrip.com/">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <meta name="theme-color" content="#06110E">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Read &amp; Rip">
-<meta property="og:title" content="Read &amp; Rip | QB Training, the App and Football IQ">
-<meta property="og:description" content="Read &amp; Rip: quarterback training in Brighton, Michigan, the Read &amp; Rip app for coverage and pre-snap reads, and plain-words football IQ articles.">
+<meta property="og:title" content="Read &amp; Rip | Football IQ App and QB Training">
+<meta property="og:description" content="Read &amp; Rip is a football IQ app: learn coverages, fronts and pre-snap reads, then rep them in the Vision Trainer. Free in any browser or on Google Play. Plus QB training with Zach Trainor.">
 <meta property="og:url" content="https://readandrip.com/">
 <meta property="og:image" content="https://readandrip.com/assets/og-image.jpg">
 <meta property="og:locale" content="en_US">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Read &amp; Rip | QB Training, the App and Football IQ">
-<meta name="twitter:description" content="Read &amp; Rip: quarterback training in Brighton, Michigan, the Read &amp; Rip app for coverage and pre-snap reads, and plain-words football IQ articles.">
+<meta name="twitter:title" content="Read &amp; Rip | Football IQ App and QB Training">
+<meta name="twitter:description" content="Read &amp; Rip is a football IQ app: learn coverages, fronts and pre-snap reads, then rep them in the Vision Trainer. Free in any browser or on Google Play. Plus QB training with Zach Trainor.">
 <meta name="twitter:image" content="https://readandrip.com/assets/og-image.jpg">
 <link rel="icon" type="image/png" href="assets/favicon.png">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -25,6 +26,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,700;1,800&family=Barlow:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap">
 <link rel="stylesheet" href="styles.css">
+<script src="site.js" defer></script>
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
@@ -49,146 +51,247 @@
 }</script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 <header class="site">
   <div class="wrap navbar">
     <a class="brand" href="index.html">
-      <img src="assets/logo.png" alt="Read &amp; Rip QB logo" width="224" height="224">
+      <img src="assets/logo.png" alt="" width="224" height="224">
       <span>
-        <span class="name">Read &amp; Rip QB</span><br>
-        <span class="where">Brighton, Michigan</span>
+        <span class="name">Read &amp; Rip</span>
+        <span class="where">Football IQ &middot; QB Training</span>
       </span>
     </a>
     <nav class="main" aria-label="Main">
-      <a href="index.html" aria-current="page">Home</a>
+      <a href="app.html">For Players</a>
+      <a href="coaches.html">For Coaches</a>
       <a href="training.html">QB Training</a>
-      <a href="film-report.html">Film Reports</a>
-      <a href="flag-football-qb-training.html">Flag QB</a>
-      <a href="app.html">The App</a>
-      <a href="https://learn.readandrip.com">Articles</a>
-      <a href="about.html">About</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="https://learn.readandrip.com">Learn Free</a>
     </nav>
-    <a class="btn sm" href="https://calendly.com/zachtrainor-readripqb/individual-qb-training-75">Book a session &mdash; $75</a>
+    <div class="nav-actions">
+      <a class="login" href="https://readripqb.com/login">Log in</a>
+      <a class="btn sm" href="https://readripqb.com">Start free</a>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="site-menu" data-menu-open><span class="bars" aria-hidden="true"><i></i></span>Menu</button>
+    </div>
+  </div>
+  <div class="menu-panel" id="site-menu" role="dialog" aria-modal="true" aria-label="Site menu" hidden>
+    <div class="menu-top">
+      <a class="brand" href="index.html"><img src="assets/logo.png" alt="" width="224" height="224"><span class="name">Read &amp; Rip</span><span class="sr-only">home</span></a>
+      <button class="menu-btn" type="button" data-menu-close style="display:inline-flex">Close</button>
+    </div>
+    <nav aria-label="Mobile">
+      <a href="index.html" aria-current="page">Home</a>
+      <a href="app.html">For Players</a>
+      <a href="coaches.html">For Coaches</a>
+      <a href="training.html">QB Training</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="https://learn.readandrip.com">Learn Free</a>
+    </nav>
+    <div class="menu-cta">
+      <a class="btn" href="https://readripqb.com">Start free</a>
+      <a class="btn ghost" href="https://readripqb.com/login">Log in</a>
+    </div>
+    <p class="menu-note">Booking a QB training session with Zach? That's under <a href="training.html">QB Training</a>, separate from the app.</p>
   </div>
 </header>
 
-<main>
-  <section>
-    <div class="wrap hero">
-      <div class="stack">
-        <span class="mono">Read &amp; Rip &middot; Read it. Rip it.</span>
-        <h1>Learn to <span style="color:var(--accent)">read</span> the defense before the snap.</h1>
-        <p style="font-size:clamp(18px,2.2vw,22px);line-height:1.5;color:var(--muted);max-width:600px">I'm Zach Trainor. I played quarterback at the D1, D2 and D3 levels. Train with me in Brighton, rep your reads on the Read &amp; Rip app, or learn the game in plain words.</p>
+<main id="main">
+  <!-- 1. Hero: what Read & Rip is, with the real product -->
+  <section class="home-hero field glow">
+    <div class="wrap hero hero-split">
+      <div class="hero-copy stack">
+        <span class="aud-chip">Football IQ app &middot; QB training</span>
+        <h1>See the defense <span class="accent">before the snap.</span></h1>
+        <p class="lede">Read &amp; Rip teaches football in plain words, then gives you reps at recognizing defenses before the snap. Players learn the reads; coaches put their own playbook in front of the team.</p>
         <div class="btnrow">
-          <a class="btn" href="#training">QB training</a>
-          <a class="btn ghost" href="#app">The app</a>
-          <a class="btn ghost" href="#articles">Articles</a>
+          <a class="btn" href="https://readripqb.com">Start free</a>
+          <a class="btn ghost" href="coaches.html">For coaches</a>
         </div>
       </div>
-    <div class="viz">
-      <div class="board"><div class="frame"></div><svg viewBox="0 0 400 344" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="cov3t cov3d"><title id="cov3t">Cover 3 defensive shell</title><desc id="cov3d">A defense in Cover 3: the field split into three deep zones with four underneath zones in front of them, and a four-man rush on the line of scrimmage. This is the picture a quarterback has to name before the ball is snapped.</desc><rect width="400" height="344" fill="var(--surface)"/><path d="M14 292 H386" stroke="var(--ink)" stroke-opacity=".22" stroke-width="2"/><rect x="18" y="38" width="118" height="84" rx="6" fill="var(--accent)" fill-opacity=".05" stroke="var(--accent)" stroke-opacity=".6" stroke-width="1.6" stroke-dasharray="6 6"/><rect x="141" y="38" width="118" height="84" rx="6" fill="var(--accent)" fill-opacity=".05" stroke="var(--accent)" stroke-opacity=".6" stroke-width="1.6" stroke-dasharray="6 6"/><rect x="264" y="38" width="118" height="84" rx="6" fill="var(--accent)" fill-opacity=".05" stroke="var(--accent)" stroke-opacity=".6" stroke-width="1.6" stroke-dasharray="6 6"/><text x="77" y="84" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="13" font-weight="600" fill="var(--accent)" opacity=".85">1/3</text><text x="200" y="84" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="13" font-weight="600" fill="var(--accent)" opacity=".85">1/3</text><text x="323" y="84" text-anchor="middle" font-family="IBM Plex Mono,monospace" font-size="13" font-weight="600" fill="var(--accent)" opacity=".85">1/3</text><path d="M70 139 L84 153 M84 139 L70 153" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" opacity="1"/><path d="M193 139 L207 153 M207 139 L193 153" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" opacity="1"/><path d="M316 139 L330 153 M330 139 L316 153" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" opacity="1"/><circle cx="62" cy="205" r="30" fill="var(--accent)" fill-opacity=".05" stroke="var(--accent)" stroke-opacity=".45" stroke-width="1.6" stroke-dasharray="5 6"/><circle cx="154" cy="205" r="30" fill="var(--accent)" fill-opacity=".05" stroke="var(--accent)" stroke-opacity=".45" stroke-width="1.6" stroke-dasharray="5 6"/><circle cx="246" cy="205" r="30" fill="var(--accent)" fill-opacity=".05" stroke="var(--accent)" stroke-opacity=".45" stroke-width="1.6" stroke-dasharray="5 6"/><circle cx="338" cy="205" r="30" fill="var(--accent)" fill-opacity=".05" stroke="var(--accent)" stroke-opacity=".45" stroke-width="1.6" stroke-dasharray="5 6"/><path d="M55 198 L69 212 M69 198 L55 212" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" opacity="1"/><path d="M147 198 L161 212 M161 198 L147 212" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" opacity="1"/><path d="M239 198 L253 212 M253 198 L239 212" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" opacity="1"/><path d="M331 198 L345 212 M345 198 L331 212" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" opacity="1"/><path d="M157 262 L169 274 M169 262 L157 274" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" opacity="1"/><path d="M181 262 L193 274 M193 262 L181 274" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" opacity="1"/><path d="M207 262 L219 274 M219 262 L207 274" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" opacity="1"/><path d="M231 262 L243 274 M243 262 L231 274" stroke="var(--ink)" stroke-width="2.4" stroke-linecap="round" opacity="1"/><circle cx="160" cy="292" r="5.0" fill="var(--muted)" opacity=".75"/><circle cx="180" cy="292" r="5.0" fill="var(--muted)" opacity=".75"/><circle cx="200" cy="292" r="5.0" fill="var(--muted)" opacity=".75"/><circle cx="220" cy="292" r="5.0" fill="var(--muted)" opacity=".75"/><circle cx="240" cy="292" r="5.0" fill="var(--muted)" opacity=".75"/><circle cx="55" cy="292" r="5.5" fill="var(--accent)" opacity="1"/><circle cx="345" cy="292" r="5.5" fill="var(--accent)" opacity="1"/><circle cx="200" cy="318" r="7.0" fill="var(--accent)" opacity="1"/><text x="18" y="24" font-family="IBM Plex Mono,monospace" font-size="12.5" font-weight="600" letter-spacing="2" fill="var(--accent)">COVER 3</text><text x="382" y="24" text-anchor="end" font-family="IBM Plex Mono,monospace" font-size="12.5" font-weight="600" letter-spacing="2" fill="var(--ink)" opacity=".45">3 DEEP / 4 UNDER</text></svg></div>
-      <div class="cap">Can your QB name this before the snap?</div>
-    </div>
-    </div>
-  </section>
-
-  <section class="tint" id="training">
-    <div class="wrap stack">
-      <div style="display:flex;justify-content:space-between;align-items:end;gap:32px;flex-wrap:wrap">
-        <div class="stack" style="gap:14px">
-          <span class="mono">QB training &middot; Brighton, Michigan</span>
-          <h2>Train with me</h2>
-        </div>
-        <p class="muted" style="font-size:18px;max-width:380px">Ages 8 through varsity, tackle and flag. Book one session at a time. Parents are always welcome.</p>
+      <div class="hero-meta stack tight">
+        <ul class="avail" aria-label="Where Read &amp; Rip runs">
+          <li>Any web browser</li>
+          <li>Google Play</li>
+          <li>Free to start</li>
+        </ul>
+        <p class="hero-aside">Booking a session with Zach? <a class="textlink arrow" href="training.html">QB Training</a></p>
       </div>
-      <div class="grid g3">
-        <div class="card featured">
-          <span class="mono">Individual</span>
-          <div class="amount"><span class="big">$75</span><span class="per">/ 60 min</span></div>
-          <p>One QB, one coach. The whole hour is built around your QB's game.</p>
-          <a class="btn" href="https://calendly.com/zachtrainor-readripqb/individual-qb-training-75">Book 1-on-1</a>
+      <figure class="combo">
+        <div class="combo-stage">
+        <div class="device laptop">
+          <div class="lid"><div class="screen wide"><img src="media/screens/coach-play-designer.jpg" alt="Coach play designer with a play drawn against a defense, plus formations, coverages and the play library (demo data)" width="1280" height="662" decoding="async" fetchpriority="high"></div></div>
+          <div class="base"></div>
         </div>
-        <div class="card">
-          <span class="mono">Small group</span>
-          <div class="amount"><span class="big">$50</span><span class="per">/ per QB</span></div>
-          <p>Two or three QBs. Same reads and mechanics work, shared reps.</p>
-          <a class="btn ghost" href="small-group-qb-training.html">Small group training</a>
+        <div class="device phone"><div class="screen"><img src="media/screens/vision-trainer.jpg" alt="Read &amp; Rip Vision Trainer: first-person view from behind center in a 3D stadium, scanning the defense before the snap" width="560" height="1212" decoding="async" fetchpriority="high"></div></div>
         </div>
-        <div class="card">
-          <span class="mono">Film report</span>
-          <div class="amount"><span class="big">$50</span><span class="per">/ per game</span></div>
-          <p>Send one game. Get a written report and video walkthrough within 24 hours.</p>
-          <a class="btn ghost" href="film-report.html">How film reports work</a>
-        </div>
-      </div>
-      <div class="btnrow">
-        <a class="btn ghost" href="training.html">All QB training</a>
-        <a class="btn ghost" href="flag-football-qb-training.html">Flag football QBs</a>
-      </div>
+        <figcaption>Vision Trainer on a phone &middot; coach play designer (demo data)</figcaption>
+      </figure>
     </div>
   </section>
 
-  <section id="app">
+  <!-- 2. Three audience paths -->
+  <section class="tint" aria-labelledby="paths-h">
     <div class="wrap stack">
-      <span class="mono">The Read &amp; Rip app</span>
-      <h2>Reps for the days you're not on the field</h2>
-      <p class="muted" style="font-size:19px;max-width:74ch">You can throw in the backyard. You can't run Cover 3 in it. The app puts defensive looks on a screen, over and over, until naming the coverage, the front and the blitz before the snap stops being work. Start free in any browser or on Google Play.</p>
-      <div class="numbered">
-        <div class="item"><span class="n">01</span><span class="t">Season mode</span></div>
-        <div class="item"><span class="n">02</span><span class="t">Vision Trainer</span></div>
-        <div class="item"><span class="n">03</span><span class="t">Coverages &amp; fronts</span></div>
-        <div class="item"><span class="n">04</span><span class="t">Quizzes &amp; progress</span></div>
+      <div class="sec-intro">
+        <h2 id="paths-h">Pick your path</h2>
+        <p>One app for players and coaches. QB training with Zach is a separate, in-person service.</p>
       </div>
-      <div class="btnrow">
-        <a class="btn" href="https://readripqb.com">Open the app</a>
-        <a class="btn ghost" href="app.html">What the app does</a>
-      </div>
-      <div class="band">
-        <span class="mono" style="color:var(--on-accent)">For coaches</span>
-        <h3>See it with your playbook in mind.</h3>
-        <p>A free 15-minute walkthrough for coaches and athletic directors: the playbook designer, quizzes built off your own plays, the call sheet and practice plan builders, and the player side with progress tracking.</p>
-        <div class="btnrow"><a class="btn" style="background:var(--on-accent);color:var(--accent)" href="https://calendly.com/zachtrainor-readripqb/read-rip-app-demo">Book a free demo</a></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="tint" id="articles">
-    <div class="wrap stack">
-      <span class="mono">Articles &middot; Read &amp; Rip Football IQ</span>
-      <h2>Football IQ, taught on a whiteboard</h2>
-      <p class="muted" style="font-size:19px;max-width:74ch">Coverages, fronts, gaps and pre-snap reads, explained plainly for players, parents and coaches.</p>
-      <div class="grid g2">
-        <a class="card" style="text-decoration:none;color:inherit" href="https://learn.readandrip.com/what-is-a-gap-in-football/">
-          <span class="mono">Football basics</span>
-          <h3>What Is a Gap in Football? A, B, C and D Gaps Explained</h3>
-          <p>A gap is the space between two blockers. Where the A, B, C and D gaps are, why every defender owns one, and what to look for before the snap.</p>
+      <div class="lanes">
+        <a class="lane" href="app.html">
+          <div class="vis vis-phone" aria-hidden="true">
+            <div class="device phone"><div class="screen"><img src="media/screens/vision-trainer-read.jpg" alt="" width="560" height="1212" loading="lazy" decoding="async"></div></div>
+          </div>
+          <div class="body">
+            <span class="aud-chip">For Players</span>
+            <h3>Learn the game. Rep the reads.</h3>
+            <p>A beginner's guide through varsity-level modules, plus the Vision Trainer, Season Mode and quizzes.</p>
+            <span class="go">Explore the player app</span>
+          </div>
+        </a>
+        <a class="lane" href="coaches.html">
+          <div class="vis vis-coach" aria-hidden="true">
+            <div class="device laptop"><div class="lid"><div class="screen"><img src="media/screens/coach-performance.jpg" alt="" width="686" height="428" loading="lazy" decoding="async"></div></div></div>
+            <span class="demo-tag">Demo data</span>
+          </div>
+          <div class="body">
+            <span class="aud-chip">For Coaches</span>
+            <h3>Your playbook, in their pockets.</h3>
+            <p>Design plays, share a team playbook, quiz players on your plays and grade them weekly.</p>
+            <span class="go">See the coaching tools</span>
+          </div>
+        </a>
+        <a class="lane chalk" href="training.html">
+          <div class="vis vis-photo">
+            <img class="portrait-fill" src="assets/zach-portrait.jpg" alt="Zach Trainor at quarterback, dropping back to throw" width="760" height="950" loading="lazy" decoding="async">
+          </div>
+          <div class="body">
+            <span class="aud-chip chalk">QB Training</span>
+            <h3>Train with Zach in person.</h3>
+            <p>In-person QB training in Brighton, Michigan, plus film reports by email. Booked and paid separately from the app.</p>
+            <span class="meta">1-on-1 $75 &middot; Small group $50 per QB &middot; Film report $50</span>
+            <span class="go">See QB training</span>
+          </div>
         </a>
       </div>
-      <div class="btnrow"><a class="btn ghost" href="https://learn.readandrip.com">All articles</a></div>
+    </div>
+  </section>
+
+  <!-- 3. Short product demonstration with real screens -->
+  <section aria-labelledby="demo-h">
+    <div class="wrap demo" data-demo>
+      <div class="stack tight">
+        <span class="mono">How the app works</span>
+        <h2 id="demo-h">Learn it. Read it. Prove it. Track it.</h2>
+        <div class="demo-tabs" role="tablist" aria-label="App steps">
+          <button class="demo-tab" type="button" role="tab" id="t-learn" aria-controls="p-learn" aria-selected="true"><span class="k">01 Learn</span><b>Beginner's guide</b><span class="d">Start from zero, then go module by module through pre-snap reads, fronts, coverages and the concepts that beat them.</span></button>
+          <button class="demo-tab" type="button" role="tab" id="t-read" aria-controls="p-read" aria-selected="false" tabindex="-1"><span class="k">02 Read</span><b>Vision Trainer</b><span class="d">First person, behind center. Read the look and call the coverage and where the ball should go, before the snap.</span></button>
+          <button class="demo-tab" type="button" role="tab" id="t-prove" aria-controls="p-prove" aria-selected="false" tabindex="-1"><span class="k">03 Prove</span><b>Season Mode &amp; quizzes</b><span class="d">Call the shell and the coverage on each snap and move the chains. Quizzes include a timed two-minute drill.</span></button>
+          <button class="demo-tab" type="button" role="tab" id="t-track" aria-controls="p-track" aria-selected="false" tabindex="-1"><span class="k">04 Track</span><b>Progress</b><span class="d">See what's improving, what keeps getting missed and your daily streak.</span></button>
+        </div>
+        <div class="demo-links">
+          <a class="textlink arrow" href="app.html#walkthrough">Watch the 90-second player walkthrough</a>
+          <a class="textlink arrow" href="coaches.html#walkthrough">Coach walkthrough</a>
+        </div>
+      </div>
+      <div class="demo-screens">
+        <figure class="demo-panel is-on" role="tabpanel" id="p-learn" aria-labelledby="t-learn">
+          <div class="device phone"><div class="screen"><img src="media/screens/beginners-guide.jpg" alt="Beginner's Guide to Football screen showing the field and its dimensions" width="560" height="1212" loading="lazy" decoding="async"></div></div>
+          <figcaption>Beginner's guide</figcaption>
+        </figure>
+        <figure class="demo-panel" role="tabpanel" id="p-read" aria-labelledby="t-read">
+          <div class="device phone"><div class="screen"><img src="media/screens/vision-trainer-read.jpg" alt="Vision Trainer question: What coverage is the defense showing? Cover 2 Man is marked correct" width="560" height="1212" loading="lazy" decoding="async"></div></div>
+          <figcaption>Vision Trainer</figcaption>
+        </figure>
+        <figure class="demo-panel" role="tabpanel" id="p-prove" aria-labelledby="t-prove">
+          <div class="device phone"><div class="screen"><img src="media/screens/season-mode.jpg" alt="Season Mode: a defensive formation on the field and the question What's the shell?" width="560" height="1212" loading="lazy" decoding="async"></div></div>
+          <figcaption>Season Mode</figcaption>
+        </figure>
+        <figure class="demo-panel" role="tabpanel" id="p-track" aria-labelledby="t-track">
+          <div class="device phone"><div class="screen"><img src="media/screens/player-progress.jpg" alt="Progress screen from an example account: category overview chart and quiz score trend" width="560" height="1212" loading="lazy" decoding="async"></div></div>
+          <figcaption>Progress (example account)</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Founder / trust -->
+  <section class="tint" aria-labelledby="founder-h">
+    <div class="wrap trust">
+      <div class="photo"><img src="assets/zach-portrait.jpg" alt="Zach Trainor at quarterback, dropping back to throw" width="760" height="950" loading="lazy" decoding="async"></div>
+      <div class="stack tight">
+        <span class="mono">Built by a quarterback</span>
+        <h2 id="founder-h">I'm Zach Trainor.</h2>
+        <p class="body-lg">I played quarterback at the D1, D2 and D3 levels: three programs, three systems. I built Read &amp; Rip so players can rep reading a defense on their own time, because you can throw in the backyard, but you can't run Cover 3 in it.</p>
+        <div class="facts-row"><span>QB at D1, D2 and D3</span><span>Built Read &amp; Rip</span><span>Trains QBs in Brighton, Michigan</span></div>
+        <div><a class="textlink arrow" href="about.html">More about Zach</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Final action -->
+  <section class="closer">
+    <div class="wrap inner">
+      <div class="stack">
+        <span class="mono">Free in any browser &middot; Google Play</span>
+        <h2>Your next rep starts free.</h2>
+        <p class="also"><span>Coaching a team? <a href="https://calendly.com/zachtrainor-readripqb/read-rip-app-demo">Book a free 15-minute app demo</a></span><span>Training with Zach? <a href="training.html">See QB training</a></span></p>
+      </div>
+      <div class="picks">
+        <a class="pick" href="https://readripqb.com">Start free <span class="amt" aria-hidden="true">&rarr;</span></a>
+        <a class="pick outline" href="https://play.google.com/store/apps/details?id=com.readripqb.app">Get it on Google Play <span class="amt" aria-hidden="true">&rarr;</span></a>
+      </div>
     </div>
   </section>
 </main>
 
 <footer class="site">
-  <div class="wrap inner">
-    <div class="id">
-      <img src="assets/logo.png" alt="" width="224" height="224">
-      <span>Read &amp; Rip &middot; Coach Zach Trainor &middot; Brighton, MI</span>
+  <div class="wrap cols">
+    <div class="about-col">
+      <div class="id"><img src="assets/logo.png" alt="" width="224" height="224"><span>Read &amp; Rip</span></div>
+      <p>Football IQ for players, coaches and fans, plus in-person QB training with Coach Zach Trainor.</p>
     </div>
-    <nav>
-      <a href="training.html">QB Training</a>
-      <a href="one-on-one-qb-training.html">1-on-1</a>
-      <a href="small-group-qb-training.html">Small Group</a>
-      <a href="film-report.html">Film Reports</a>
-      <a href="flag-football-qb-training.html">Flag QB</a>
-      <a href="app.html">The App</a>
-      <a href="https://learn.readandrip.com">Articles</a>
-      <a href="about.html">About</a>
-      <a href="press.html">Press</a>
+    <nav aria-label="The app">
+      <h2>The app</h2>
+      <ul>
+        <li><a href="app.html">For players</a></li>
+        <li><a href="coaches.html">For coaches</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="https://readripqb.com/login">Log in</a></li>
+        <li><a href="https://play.google.com/store/apps/details?id=com.readripqb.app">Google Play</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="QB training">
+      <h2>QB training</h2>
+      <ul>
+        <li><a href="training.html">QB Training</a></li>
+        <li><a href="one-on-one-qb-training.html">1-on-1</a></li>
+        <li><a href="small-group-qb-training.html">Small Group</a></li>
+        <li><a href="flag-football-qb-training.html">Flag QB</a></li>
+        <li><a href="film-report.html">Film Reports</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Learn">
+      <h2>Learn free</h2>
+      <ul>
+        <li><a href="https://learn.readandrip.com">All articles</a></li>
+        <li><a href="https://learn.readandrip.com/coverage-quiz/">Coverage quiz</a></li>
+        <li><a href="https://learn.readandrip.com/football-coverages-explained/">Coverages explained</a></li>
+        <li><a href="https://learn.readandrip.com/what-is-a-gap-in-football/">Gaps explained</a></li>
+      </ul>
+    </nav>
+    <nav aria-label="Company">
+      <h2>Read &amp; Rip</h2>
+      <ul>
+        <li><a href="about.html">About</a></li>
+        <li><a href="press.html">Press</a></li>
+        <li><a href="privacy.html">Privacy</a></li>
+        <li><a href="terms.html">Terms</a></li>
+      </ul>
     </nav>
   </div>
   <div class="wrap legal">
-    <span>&copy; 2026 Read &amp; Rip QB Training &middot; <a href="mailto:zachtrainor@readripqb.com">zachtrainor@readripqb.com</a> &middot; <a href="tel:+12488046196">(248) 804-6196</a> &middot; <a href="privacy.html">Privacy</a> &middot; <a href="terms.html">Terms</a></span>
-    <span>Mon&ndash;Fri 10&ndash;6 &middot; Sun 12:30&ndash;3:30 &middot; Also: <a href="https://readripqb.com">the Read &amp; Rip app</a></span>
+    <span>&copy; 2026 Read &amp; Rip QB Training &middot; <a href="mailto:zachtrainor@readripqb.com">zachtrainor@readripqb.com</a> &middot; <a href="tel:+12488046196">(248) 804-6196</a></span>
+    <span>QB training: <a href="https://calendly.com/zachtrainor-readripqb/individual-qb-training-75">current availability on Calendly</a> &middot; Also: <a href="https://readripqb.com">the Read &amp; Rip app</a></span>
   </div>
 </footer>
 
