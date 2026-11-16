@@ -175,3 +175,32 @@
 
   if (reduceMotion) root.classList.add("reduced-motion");
 })();
+
+/* ---------- ad tracking: count the clicks that matter ----------
+   Sends an event to the Google tag (loaded in each page's <head>) when someone
+   clicks Start free, Log in, Google Play, or a Calendly booking link.
+   Does nothing if the tag is blocked; the link always works as normal. */
+(function () {
+  "use strict";
+  var events = [
+    { test: /^https:\/\/readripqb\.com\/login/, name: "app_login_click" },
+    { test: /^https:\/\/readripqb\.com\/?($|[?#])/, name: "start_free_click" },
+    { test: /^https:\/\/play\.google\.com\//, name: "google_play_click" },
+    { test: /^https:\/\/calendly\.com\/zachtrainor-readripqb\/read-rip-app-demo/, name: "demo_booking_click" },
+    { test: /^https:\/\/calendly\.com\/zachtrainor-readripqb\//, name: "training_booking_click" }
+  ];
+  document.addEventListener("click", function (e) {
+    var a = e.target && e.target.closest ? e.target.closest("a[href]") : null;
+    if (!a || typeof window.gtag !== "function") return;
+    for (var i = 0; i < events.length; i++) {
+      if (events[i].test.test(a.href)) {
+        window.gtag("event", events[i].name, {
+          link_url: a.href,
+          link_text: (a.textContent || "").trim().slice(0, 80),
+          page_path: location.pathname
+        });
+        return;
+      }
+    }
+  }, true);
+})();
