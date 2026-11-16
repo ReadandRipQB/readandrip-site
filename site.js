@@ -184,7 +184,8 @@
   "use strict";
   var events = [
     { test: /^https:\/\/readripqb\.com\/login/, name: "app_login_click" },
-    { test: /^https:\/\/readripqb\.com\/?($|[?#])/, name: "start_free_click" },
+    // Start free also counts as the "Start free click" conversion in Google Ads.
+    { test: /^https:\/\/readripqb\.com\/?($|[?#])/, name: "start_free_click", adsConversion: "AW-18578723666/Oy1fCLOSxbkdENKmg5tF" },
     { test: /^https:\/\/play\.google\.com\//, name: "google_play_click" },
     { test: /^https:\/\/calendly\.com\/zachtrainor-readripqb\/read-rip-app-demo/, name: "demo_booking_click" },
     { test: /^https:\/\/calendly\.com\/zachtrainor-readripqb\//, name: "training_booking_click" }
@@ -199,6 +200,9 @@
           link_text: (a.textContent || "").trim().slice(0, 80),
           page_path: location.pathname
         });
+        if (events[i].adsConversion) {
+          window.gtag("event", "conversion", { send_to: events[i].adsConversion, transport_type: "beacon" });
+        }
         return;
       }
     }
